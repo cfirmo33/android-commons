@@ -12,3 +12,7 @@ android:
 
 before_install:
   - script/start_emulator.sh
+after_failure:
+  - cat espresso/build/outputs/lint-results-debug.html
+  - cat espresso/build/outputs/lint-results-debug.xml
+
